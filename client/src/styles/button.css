@@ -1,0 +1,14 @@
+.green{
+    position: absolute;
+    width: 165px;
+    height: 35px;
+    left: 1312px;
+    top: 19px;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 54px;
+    gap: 10px;
+    color: #FFFFFF;
+    background: #6DC9B7;
+    border-radius: 4px;
+}
