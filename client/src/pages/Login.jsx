@@ -12,15 +12,12 @@ const Login = () => {
             <h4>Welcome back!Happy to see you again.</h4>
             </div>
             <div className='button'>
-                <Tab />
-                
+              <Tab />  
             </div>
             <div className="loginbutton">
 
             </div>
-            <div className='signuppara'>
-                <p>Don't have an account? <a href="#">Sign Up</a></p>
-            </div>
+            
         </div>
         <div className='right-section'>
             <div className='content'>
@@ -37,15 +34,16 @@ const Login = () => {
 
 
 function Tab(){
+  const role=["Doctor","Student"];
     return(
         <Tabs
         type="card"
         items={new Array(2).fill(null).map((_, i) => {
-          const id = String(i + 1);
+          const role1=role[i];
           return {
-            label: `Tab ${id}`,
-            key: id,
-            children: <StudentSignup />,
+            label: `${role1}`,
+            key: i,
+            children: (role1 ==='Student')?<StudentSignup />: <DoctorSignup />,
           };
         })}
       />
@@ -112,7 +110,7 @@ return(
       onChange={handleChange}
       required
     />
-    <div className="gender">
+    {/* <div className="gender">
       <label>Gender:</label>
       <div>
         <div>
@@ -149,7 +147,7 @@ return(
           <label htmlFor="other">Others</label>
         </div>
       </div>
-    </div>
+    </div> */}
     <input
       type="text"
       name="college"
@@ -188,5 +186,74 @@ function CustomMessage(props) {
       return <></>;
     }
 }
+
+function DoctorSignup(){
+  const [notvalidated, setNotvalidated] = useState(false);
+  const [user, setUser] = useState({
+  name: "",
+  email: "",
+  pw: "",
+  confirmpw: "",
+  doctorid: "",
+  
+});
+
+const handleChange = (event) => {
+  const field = event.target.name;
+  const value = event.target.value;
+  setUser((user) => ({ ...user, [field]: value }));
+};
+return(
+  <form >
+  <input
+    type="text"
+    name="name"
+    value={user.name || ""}
+    placeholder="Enter Name"
+    onChange={handleChange}
+    required
+  />
+  <input
+    type="email"
+    name="email"
+    value={user.email || ""}
+    placeholder="Enter Email-ID"
+    onChange={handleChange}
+    required
+  />
+  <input
+    type="password"
+    name="pw"
+    value={user.pw || ""}
+    placeholder="Enter Password"
+    onChange={handleChange}
+    required
+  />
+  <input
+    type="password"
+    name="confirmpw"
+    value={user.confirmpw || ""}
+    placeholder="Re-enter password"
+    onChange={handleChange}
+    required
+  />
+     <input
+      type="text"
+      name="doctorid"
+      value={user.yearOfCollege || ""}
+      placeholder="Enter Doctor ID"
+      onChange={handleChange}
+      required
+    />
+    <button type="submit" className="submit">
+      Sign Up
+    </button>
+
+    <CustomMessage toshow={notvalidated} />
+  </form>
+
+);
+}
+
 
 export default Login

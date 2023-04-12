@@ -13,6 +13,7 @@
     left: 757px;
     height:100%;
     top: 0px;
+    padding: 0px;
     background: #FFFFFF;
 }
 .container .right-section{
@@ -57,3 +58,121 @@
     margin:10px;
     color: #111F4A;
 }
+
+
+.left-section .heading {
+    display:flex;
+    flex-direction: column;
+    position: relative;
+    left:0px;
+    margin-top: 4rem;
+    margin-left: 6.5rem;
+    margin-button: 10px;
+    
+  
+}
+.left-section .heading h1{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 36px;
+    color: #111F4A;
+    margin:0px;
+}
+.left-section .heading h4{
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 21px;
+    color: #111F4A;
+    margin-bottom: 0px;
+}
+
+.ant-tabs-nav-wrap{
+    background: #6DC9B7;
+    border-radius: 8px;
+}
+.ant-tabs-nav{
+    width:406px;
+}
+.ant-tabs {
+    width:402px;
+    margin-left: 6.5rem ;
+}
+
+.ant-tabs-nav-operations{
+    display:none !important;
+}
+
+.ant-tabs-nav-list{
+    width:10px;
+}
+.ant-tabs-tab-btn{
+    width:168px;
+    height: 30px;
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 23px;
+    color: #111F4A;
+    padding-top: 2px;
+
+}
+form{
+    display:flex;
+    flex-direction: column;
+}
+form input{
+    width: 401px;
+    height: 48px;
+    background: rgba(235, 255, 251, 0.5);
+    border: 1px solid #6DC9B7;
+    border-radius: 4px;
+    margin-top:1rem;
+    font-size: 19px;
+}
+::placeholder{
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    color: #6DC9B7;
+    padding-left:0.5rem;
+}
+.submit{
+    width: 403px;
+    height: 44px;
+    background: #6DC9B7;
+    border-radius: 8px;
+    margin-top: 1rem;
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+    color: #FFFFFF;
+}
+
+/* .signuppara p{
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 21px;  
+    color: #111F4A;
+    margin-left:9rem;
+    margin-top: 3rem;
+    margin-right: 22rem;
+}
+.signuppara a{
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    color: #6DC9B7;
+    margin-left: 0.3rem;
+
+} */
